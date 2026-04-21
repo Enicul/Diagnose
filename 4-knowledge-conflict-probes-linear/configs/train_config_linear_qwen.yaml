@@ -42,7 +42,7 @@ seed: 42
 train_datasets:
   - dataset_id: "Qwen2.5-VL-7B-Instruct-train"
     hf_repo: "1Jin1/TriConflict-hallucination-annotations-80_20"
-    subset: "R1-Onevision-7B"
+    subset: "Ocean_R1_7B_Instruct"
     split: "train"
     max_length: 1536
     default_ignore: false
@@ -59,7 +59,7 @@ train_datasets:
 eval_datasets:
   - dataset_id: "Qwen2.5-VL-7B-Instruct-test"
     hf_repo: "1Jin1/TriConflict-hallucination-annotations-80_20"
-    subset: "R1-Onevision-7B"
+    subset: "Ocean_R1_7B_Instruct"
     split: "test"
     max_length: 1536
     vpc_weight: 10.0
