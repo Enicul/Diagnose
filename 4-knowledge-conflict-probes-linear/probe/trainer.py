@@ -251,6 +251,7 @@ class ProbeTrainer(Trainer):
             eps=self.args.adam_epsilon if hasattr(self.args, 'adam_epsilon') else 1e-8
         )
 
+        self.optimizer = optimizer
         return optimizer
     
     def create_optimizer_and_scheduler(self, num_training_steps: int):
