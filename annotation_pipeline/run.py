@@ -90,7 +90,7 @@ class PipelineConfig:
 
     hf_token: str = None  # Set via environment variable HF_TOKEN
     output_dir: Path = Path("./hallucination_annotations")
-    enable_hf_upload: bool = True
+    enable_hf_upload: bool = False
     
 
     verbose: bool = True

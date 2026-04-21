@@ -15,7 +15,7 @@ from huggingface_hub import login
 # 1. vLLM Service Configuration
 VLLM_API_URL = "http://localhost:8000/v1"
 VLLM_API_KEY = "EMPTY"
-MODEL_NAME = "path/to/your/model"  # Ensure consistency with vllm serve model name
+MODEL_NAME = "/path/to/Qwen2.5-VL-7B"  # Update to your actual server model path
 
 # 2. Dataset Configuration
 SOURCE_DATASET_ID = "anonymous/image_vs_text_problems"  # Replace with your dataset
@@ -192,8 +192,8 @@ async def main():
 
     # Upload
     print(f"Uploading to {TARGET_REPO_ID} ...")
-    new_dataset.push_to_hub(TARGET_REPO_ID, TARGET_SUBSET, split=TARGET_SPLIT, private=False)
-    print("Done! Upload successful!")
+    new_dataset.save_to_disk("./output/image_vs_text_inference")
+    print("Done! Saved locally to ./output/image_vs_text_inference")
 
 if __name__ == "__main__":
     asyncio.run(main())

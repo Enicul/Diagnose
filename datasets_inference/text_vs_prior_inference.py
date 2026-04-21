@@ -13,7 +13,7 @@ VLLM_API_URL = "http://localhost:8000/v1"
 # 2. API Key (vLLM default is usually "EMPTY" unless you set it)
 VLLM_API_KEY = "EMPTY"
 # 3. Model name (must match the name used in vllm serve)
-MODEL_NAME = "path/to/your/model"
+MODEL_NAME = "/path/to/Qwen2.5-VL-7B"  # Update to your actual server model path
 
 # 4. Dataset configuration
 SOURCE_DATASET_ID = "anonymous/source-dataset"  # Replace with your dataset
@@ -93,8 +93,8 @@ async def main():
 
     # Upload to Hugging Face
     print(f"Uploading to {TARGET_REPO_ID} ...")
-    new_dataset.push_to_hub(TARGET_REPO_ID, TARGET_SUBSET, split=TARGET_SPLIT, private=False)
-    print("Upload successful!")
+    new_dataset.save_to_disk("./output/text_vs_prior_inference")
+    print("Saved locally to ./output/text_vs_prior_inference")
 
 if __name__ == "__main__":
     # Run async main
