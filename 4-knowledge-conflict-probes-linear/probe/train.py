@@ -46,7 +46,9 @@ def main(training_config: TrainingConfig):
     # ===== 3. Load model and processor/tokenizer =====
     print(f"Loading model: {training_config.probe_config.model_name}")
     model_name = training_config.probe_config.model_name
-    is_multimodal = 'vision' in model_name.lower() or 'onevision' in model_name.lower() or 'ocean_r1_7b_instruct' in model_name.lower() or 'llama-3.2v-11b-cot' in model_name.lower()
+    is_multimodal = ('vision' in model_name.lower() or 'onevision' in model_name.lower() or
+                     'ocean_r1_7b_instruct' in model_name.lower() or 'llama-3.2v-11b-cot' in model_name.lower() or
+                     'qwen2.5-vl' in model_name.lower() or 'qwen2_5_vl' in model_name.lower())
     
     if is_multimodal:
         # Use AutoProcessor instead of AutoTokenizer
