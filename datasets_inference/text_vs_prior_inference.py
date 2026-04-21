@@ -13,7 +13,7 @@ VLLM_API_URL = "http://localhost:8000/v1"
 # 2. API Key (vLLM default is usually "EMPTY" unless you set it)
 VLLM_API_KEY = "EMPTY"
 # 3. Model name (must match the name used in vllm serve)
-MODEL_NAME = "/path/to/Qwen2.5-VL-7B"  # Update to your actual server model path
+MODEL_NAME = "/home/aied_test/models/Qwen2.5-VL-7B-Instruct"
 
 # 4. Dataset configuration
 SOURCE_DATASET_ID = "anonymous/source-dataset"  # Replace with your dataset

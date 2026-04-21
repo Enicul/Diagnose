@@ -15,7 +15,7 @@ from huggingface_hub import login
 # 1. vLLM Service Configuration
 VLLM_API_URL = "http://localhost:8000/v1"
 VLLM_API_KEY = "EMPTY"
-MODEL_NAME = "/path/to/Qwen2.5-VL-7B"  # Update to your actual server model path
+MODEL_NAME = "/home/aied_test/models/Qwen2.5-VL-7B-Instruct"
 
 # 2. Dataset Configuration
 SOURCE_DATASET_ID = "anonymous/image_vs_text_problems"  # Replace with your dataset
