@@ -453,6 +453,7 @@ def main(eval_config: EvaluationConfig):
                      'onevision' in model_name.lower() or
                      'qwen2_5_vl' in model_name.lower() or
                      'qwen2.5_vl' in model_name.lower() or
+                     'qwen2.5-vl' in model_name.lower() or
                      'ocean_r1' in model_name.lower() or
                      'llama' in model_name.lower())
     
