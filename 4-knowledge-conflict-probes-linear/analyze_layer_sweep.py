@@ -17,7 +17,7 @@ results = []
 
 for layer in range(28):
     probe_id = f"Qwen2.5-VL-7B-Instruct-linear-{layer}"
-    metrics_path = PROBE_DIR / probe_id / "eval_metrics.jsonl"
+    metrics_path = PROBE_DIR / probe_id / "evaluation_results" / "eval_metrics.jsonl"
 
     if not metrics_path.exists():
         print(f"Layer {layer}: no metrics found, skipping")
